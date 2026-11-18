@@ -56,7 +56,7 @@ export default function MenuItemFormScreen({
   const initialValues = useRef<FormValues>(valuesFromItem(item)).current;
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
-  const descriptionRef = useRef<TextInput>(null);
+  const descriptionRef = useRef<React.ComponentRef<typeof TextInput>>(null);
 
   const hasErrors = Object.values(errors).some(Boolean);
   const isDirty = (Object.keys(values) as (keyof FormValues)[]).some(

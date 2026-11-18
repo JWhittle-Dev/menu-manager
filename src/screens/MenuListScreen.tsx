@@ -85,7 +85,7 @@ export default function MenuListScreen({
               <CourseFilter selected={courseFilter} onSelect={setCourseFilter} />
               <Text style={styles.countText}>{countLabel}</Text>
             </>
-          ) : null
+          ) : undefined
         }
         ListEmptyComponent={renderEmptyState()}
       />
